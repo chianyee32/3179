@@ -56,7 +56,6 @@ Denmark,Europe,Monthly,5084.99,5779.04,1458.92,25637.39
 Djibouti,Africa,Monthly,1378.57,1553.0,391.63,6921.0
 Dominica,Caribbean,Monthly,496.3,555.56,140.74,2470.37
 Dominican Republic,Caribbean,Monthly,318.89,350.6,88.62,1562.72
-East Timor,Asia,Monthly,2030,2220,560,9860
 Ecuador,South America,Monthly,1260,1370,340,6080
 Egypt,Africa,Monthly,254.53,298.51,75.36,1329.24
 El Salvador,Central America,Monthly,1470,1710,430,7610
@@ -197,6 +196,7 @@ Taiwan,Asia,Monthly,3571.43,4037.27,1015.53,17919.25
 Tajikistan,Asia,Monthly,959.78,1069.47,269.65,4753.2
 Tanzania,Africa,Monthly,457.77,505.54,126.98,2245.08
 Thailand,Asia,Monthly,2432.28,2662.11,670.31,11846.79
+Timor-Leste,Asia,Monthly,2030,2220,560,9860
 Togo,Africa,Monthly,787.96,852.41,214.31,3786.72
 Tonga,Oceania,Monthly,668.09,778.72,195.74,3459.57
 Trinidad and Tobago,Caribbean,Monthly,1258.11,1445.43,364.31,6430.68
@@ -208,7 +208,7 @@ Uganda,Africa,Monthly,645.21,698.31,176.04,3106.55
 Ukraine,Europe,Monthly,530.73,622.8,157.32,2761.98
 United Arab Emirates,Asia,Monthly,3324.25,3896.46,708.45,18637.6
 United Kingdom,Europe,Monthly,6300.0,7235.37,1829.27,32214.63
-United States,Northern America,Monthly,6966,7925,2000,35250
+United States of America,Northern America,Monthly,6966,7925,2000,35250
 Uruguay,South America,Monthly,773.64,862.2,217.24,3829.12
 Uzbekistan,Asia,Monthly,97.25,106.98,27.07,477.35
 Vanuatu,Oceania,Monthly,750.74,821.77,207.3,3650.48
