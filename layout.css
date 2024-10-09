@@ -1,0 +1,70 @@
+html,
+body {
+    background-color: #ebf7ff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.text_div {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the charts' containers if needed */
+#high, #low {
+    flex: 1; /* Allow charts to fill the space evenly */
+}
+
+/* Text alignment */
+.text_right {
+    text-align: right; /* Correct property for aligning text to the right */
+    padding: 10px; /* Add padding for spacing */
+    flex: 1; /* Optional: Adjusts the space the text can occupy */
+}
+
+.text_left {
+    text-align: left; /* Correct property for aligning text to the left */
+    padding: 10px; /* Add padding for spacing */
+    flex: 1; /* Optional: Adjusts the space the text can occupy */
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+    font-size: 40px;
+}
+
+p {
+    color: #000000;
+    font-size: 16px;
+}
+
+header {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 90vh;          /* Set to the height of the viewport or adjust as necessary */
+}
+
+.container_left {
+    display: flex;
+    justify-content: left; /* Center horizontally */
+    align-items: left;    /* Center vertically */
+    height: 60vh;        /* Set to the height of the viewport or adjust as necessary */
+}
+
+.container_right {
+    display: flex;
+    justify-content: right; /* Center horizontally */
+    align-items: right;    /* Center vertically */
+    height: 60vh;        /* Set to the height of the viewport or adjust as necessary */
+}
+
+
+

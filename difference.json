@@ -1,0 +1,110 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "transparent",
+    "description": "Lollipop chart showing the difference between the highest and lowest salaries in each country.",
+    "data": {
+        "url": "https://raw.githubusercontent.com/chianyee32/3179/refs/heads/main/salary_data.csv"
+    },
+    "params":[
+        {
+            "name": "Continent_selection",
+            "value": "Asia",
+            "bind":{
+                "input": "select",
+                "options": [
+                    "Asia",
+                    "North America",
+                    "South America",
+                    "Europe",
+                    "Africa",
+                    "Oceania",
+                    "Caribbean",
+                    "Central America",
+                    "Northern America"
+                ],
+                "labels": [
+                    "Asia",
+                    "North America",
+                    "South America",
+                    "Europe",
+                    "Africa",
+                    "Oceania",
+                    "Caribbean",
+                    "Central America",
+                    "Northern America"
+                ],
+                "name": "Continent Selection: "
+            }
+        }
+    ],
+    "transform": [
+        {
+            "calculate": "datum.highest_salary - datum.lowest_salary",
+            "as": "salary_difference"
+        },
+        {
+            "filter": "Continent_selection == null || datum.continent_name == Continent_selection"
+        }
+    ],
+    "width": 1000,
+    "height":350,
+    "layer": [
+        {
+            "mark": "rule",
+            "encoding": {
+                "x": {
+                    "field": "country_name",
+                    "type": "nominal",
+                    "axis": {
+                        "title": "Country", 
+                        "labelAngle": -45
+                    }
+                },
+                "y": {
+                    "field": "salary_difference",
+                    "type": "quantitative",
+                    "axis": {"title": "Salary Difference (USD)"}
+                },
+                "color": {
+                    "value": "black" 
+                },
+                "size": {
+                    "value": 2
+                },
+                "opacity":{ "value": 0.6}
+            }
+        },
+        {
+            "mark": {
+                "type": "point",
+                "filled": true,
+                "size": 100 
+            },
+            "encoding": {
+                "x": {
+                    "field": "country_name",
+                    "type": "nominal"
+                },
+                "y": {
+                    "field": "salary_difference",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "value": "firebrick" 
+                },
+
+                "opacity":{ "value": 0.6},
+
+                "tooltip": [
+                    {"field": "country_name", "type": "nominal", "title": "Country"},
+                    {"field": "salary_difference", "type": "quantitative", "title": "Salary Differences (USD)"}
+                ]
+            }
+        }
+    ],
+    "config": {
+        "axisY": {
+            "minExtent": 30 
+        }
+    }
+}

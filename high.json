@@ -1,0 +1,52 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "transparent",
+    "title": { "text": "Top 10 Highest Average Salary Countries" },
+    "data": {
+        "url": "https://raw.githubusercontent.com/chianyee32/3179/refs/heads/main/salary_data.csv"
+    },
+    "transform": [
+        {
+            "calculate": "isValid(datum.average_salary) ? +datum.average_salary : null",
+            "as": "average_salary"
+        },
+        {
+            "window": [
+                {"op": "rank", "as": "rank"}
+            ],
+            "sort": [{"field": "average_salary", "order": "descending"}]
+        },
+        {
+            "filter": "datum.rank <= 10"
+        }
+    ],
+    "width": 500,
+    "height":300,
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "country_name",
+            "type": "nominal",
+            "title": "Country",
+            "sort": "y",
+            "axis": {
+                "labelAngle": -45
+            }
+        },
+        "y": {
+            "field": "average_salary",
+            "type": "quantitative",
+            "title": "Average Salary (USD)",
+            "axis": {
+                "format": ",.0f"
+            }
+        },
+        "tooltip": [
+            {"field": "country_name", "type": "nominal", "title": "Country"},
+            {"field": "average_salary", "type": "quantitative", "title": "Average Salary (USD)"}
+        ]
+    },
+    "config": {
+        "bar": {"color": "#67df94"}
+    }
+}
