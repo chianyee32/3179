@@ -1,51 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+
+    <link rel="stylesheet" href="layout.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <script src="vega.js"></script>
+
+
+
+</head>
 <body>
-    <h1>Table of Student and Grade</h1>
+    <header>
+        <h1>Explore The Global Monthly Salary Nowadays</h1>
+        <p>
+            This visualisation aims to show the global monthly salary in each country. 
+            The currency is converted into United State Dollar (USD) for an easier overview comparison.
+        </p>
+    </header>
+    <main>
+        <div class="container">
+            <div id="map"></div>
+        </div>
+        <footer>
+            <div class="text_div">
+                <p>The map visualisation shows various countries monthly average salary that ranges from $0 up to $12,000 with most country shows a low monthly average salary of $0 to $4,000.</p>
+            </div>
+        </footer>
+    </main>
+    <footer>
+        <header>
+            <h1>Who Are The Top 10?</h1>
+            <div class="container_left">
+                <div id="high"></div>
+
+                <div class="container_right">
+                    <div id="low"></div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="text_div">
+                    <p>The two  histogram visualised is the highest average salary of each country, shown in the left graph, and the lowest average monthly salary within each country, shown in the right graph. The two graph are split and placed side by side to view as comparison which top 10 countries has the highest and which top 10 countries has the lowest average monthly salary.</p>
+                </div>
+            </footer>
 
 
-    <table border="1", cellpadding="10%"">
-        <tr>
-            <th>FIrst Name</th>
-            <th>Last Name</th>
-            <th>Grade</th>
-        </tr>
 
-        <tr>
-            <td>John</td>
-            <td>Doe</td>
-            <td>HD</td>
-        </tr>
+        </header>
 
-        <tr>
-            <td>Jill</td>
-            <td>Jackson</td>
-            <td>D</td>
-        </tr>
 
-        <tr>
-            <td>Jane</td>
-            <td>Smith</td>
-            <td>C</td>
-        </tr>
-    
-    </table>
 
-    <h2> Hyperlinks in HTML. </h2>
 
-    <a href=" https://www.monash.edu/">
-        Click here to view the Monash Website.
-    </a>
+        <div class="container">
+            <div id="highest_vs_average"></div>
+        </div>
+        <footer>
+            <div class="text_div">
+                <p>The line graph and histogram shows the highest and average monthly salary respectively within different countries across all continents.</p>
+            </div>
+        </footer>
 
-    <div style="color: red;">
-        <h2>Heading of first group</h2>
-        <p>This paragraph is in 1st group.</p>
-    </div>
+        <div class="container">
+            <div id="difference"></div>
+        </div>
+        <footer>
+            <div class="text_div">
+                <p>The lolipop graph shows the salary difference between the highest monthly salary minus with the lowest monthly salary within each country.</p>
+            </div>
+        </footer>
 
-    <div style="color: green;">
-        <h2>Heading of second group</h2>
-        <p>This paragraph is in 2nd group.</p>
-    </div>
-    
+    </footer>
+
+
 </body>
+
 </html>
