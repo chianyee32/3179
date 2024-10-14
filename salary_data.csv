@@ -1,4 +1,4 @@
-country_name,continent_name,wage_span,median_salary,average_salary,lowest_salary,highest_salary
+Country,Continent,Wage Span,Median Salary,Average Salary,Lowest Salary,Highest Salary
 Afghanistan,Asia,Monthly,853.74,1001.15,252.53,4460.97
 Aland Islands,Europe,Monthly,3319.24,3858.35,972.52,17124.74
 Albania,Europe,Monthly,832.84,956.92,241.22,4258.49
