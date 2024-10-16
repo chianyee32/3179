@@ -17,69 +17,163 @@
 
 
 </head>
+
 <body>
-    <header>
-        <h1>Explore The Global Monthly Salary Nowadays</h1>
-        <p>
-            This visualisation aims to show the global monthly salary in each country. 
-            The currency is converted into United State Dollar (USD) for an easier overview comparison.
-        </p>
-    </header>
-    <main>
-        <div class="container">
-            <div id="map"></div>
-        </div>
-        <footer>
-            <div class="text_div">
-                <p>The map visualisation shows various countries monthly average salary that ranges from $0 up to $12,000 with most country shows a low monthly average salary of $0 to $4,000.</p>
-            </div>
-        </footer>
-    </main>
-    <footer>
+    <div class="page">
         <header>
-            <h1>Who Are The Top 10?</h1>
-            <div class="container_left">
-                <div id="high"></div>
-
-                <div class="container_right">
-                    <div id="low"></div>
-                </div>
-            </div>
-
-            <footer>
-                <div class="text_div">
-                    <p>The two  histogram visualised is the highest average salary of each country, shown in the left graph, and the lowest average monthly salary within each country, shown in the right graph. The two graph are split and placed side by side to view as comparison which top 10 countries has the highest and which top 10 countries has the lowest average monthly salary.</p>
-                </div>
-            </footer>
-
-
-
+            <h1>Explore The Global Monthly Salary and Inflation Rate Nowadays</h1>
+            <p>
+                <span class="bold">How much does one person earn per month? And how does this income correlate with inflation? </span> 
+                This visualization aims to explore monthly salaries and inflation rates across different countries, with all figures converted to <span class="bold">United States Dollars (USD)</span> for uniform comparison. 
+                This overview allows working adults to understand global salary trends and assess how their own earnings stack up. 
+                Are we earning enough or do we fall below the global average? Let's explore these questions together.
+            </p>
         </header>
 
+        <hr>
 
+        <h2>How Is The Global Average Salary Market?</h2>
+
+        <main>
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <div class="container">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pure-g">
+                <div class="pure-u-1-2">
+                    <div class="text_left">
+                        <p>
+                            <span class="bold_s">Switzerland</span> is the country with the highest average monthly income in the world of salaries. 
+                            With an average salary of $11,292.90, <span class="bold_s">Switzerland</span> is far ahead of the rest of the world. 
+                            Nearly half of the working population has access to this substantial earning potential, which is made possible by <span class="bold_s">Switzerland's</span> <span class="bold">strong financial industry, cutting-edge technical companies, and good living conditions</span>, all of which support and warrant higher pay.
+                        </p>
+                    </div>
+                </div>
+                <div class="pure-u-1-2">
+                    <div class="text_left">
+                        <p>
+                            <span class="bold_m">Malaysia</span>, on the other hand, offers a quite different image in <span class="bold_as">Asia</span>, with an average monthly wage of $1,406.38 before taxes. 
+                            This disparity results from <span class="bold_m">Malaysia's</span> <span class="bold">developing economic standing, cheaper cost of living, and changing employment landscape</span>, which, in contrast to <span class="bold_s">Switzerland's</span>, has not yet reached the pinnacles of financial services and high-tech sector.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <hr>
+
+        <h2>Who Are The Top 10?</h2>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div id="high" class="vis-container"></div>
+            </div>
+            <div class="pure-u-1-2">
+                <div id="low" class="vis-container"></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Let's Analyse The Overview of The Global Salary</h2>
+
+
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <div class="text_left">
+                    <p>
+                        With an average salary of $11,292.90, <span class="bold_s">Switzerland</span> leads <span class="bold_e">Europe</span> in wages thanks to its developed businesses and prosperous economy. Because of its finance industry, <span class="bold_gu">Guernsey</span>, which is nearby, boasts high pay, $9,409.76.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-1-3">
+                <div class="text_left">
+                    <p>
+                        <span class="bold_m">Malaysia's</span> manufacturing-based economy generates an average wage of $1,406.38, whereas <span class="bold_sg">Singapore's</span> strong economic policies result in a high average salary of $6,235.29 in <span class="bold_as">Asia</span>.
+                    </p>
+                </div>
+            </div>
+            <div class="pure-u-1-3">
+                <div class="text_left">
+                    <p>
+                        With an average salary of $7,925, the <span class="bold_us">United States of America</span> has the highest wage potential in <span class="bold_n">North America</span>. This is due to its broad economy, which includes <span class="bold">high-paying industries like finance and technology</span>. 
+                    </p>
+                </div>
+            </div>
+        </div>
 
 
         <div class="container">
-            <div id="highest_vs_average"></div>
+            <div id="range"></div>
         </div>
-        <footer>
-            <div class="text_div">
-                <p>The line graph and histogram shows the highest and average monthly salary respectively within different countries across all continents.</p>
+
+
+        <hr>
+
+
+        <h2>Do You Know The Global Inflation Rate Is Increasing? </h2>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div class="text_left">
+                    <p>
+                        <span class="bold">The influence of market dynamics, policy choices, and economic conditions is shown in the wide variations in global inflation rates by nation and year.</span> Trends in these rates provide important information on economic growth, stability, and possible obstacles that various regions may encounter.
+                        Between 1984 and 1997, regional economic difficulties and poor policy decisions were the main causes of excessive inflation in several nations.
+                        The <span class="bold_d">Democratic Republic of the Congo</span> experienced <span class="bold">a peak inflation rate of 23,772.1% in 1994</span> as a result of significant political unrest and poor budgetary management. <span class="bold">Global inflation rates decreased after 1997</span> as a result of monetary reforms and better fiscal policy.
+                    </p>
+                </div>
             </div>
-        </footer>
+            <div class="pure-u-1-2">
+                <div class="text_left">
+                    <p>
+                        Due to economic disruptions, inflation rates were marginally elevated during the <span class="bold">COVID-19 pandemic (2019-2021)</span>. Global inflation is <span class="bold">expected to stay below 10% on average in the future</span>, with the exception of <span class="bold_z">Zimbabwe</span>, where economic challenges are still present.
+                        In certain countries, deflation was caused by a decline in commodity prices or a decrease in consumer demand. Both <span class="bold">the global financial crisis in 2008 and the Asian financial crisis in 1997</span> were major events brought on by financial market failures and speculative activity, respectively. 
+                    </p>
+                </div>
+            </div>
+        </div>
 
         <div class="container">
-            <div id="difference"></div>
+            <div id="map2"></div>
         </div>
-        <footer>
-            <div class="text_div">
-                <p>The lolipop graph shows the salary difference between the highest monthly salary minus with the lowest monthly salary within each country.</p>
+
+        <button id="toggleAnimation">Pause</button>
+
+
+        <hr>
+
+
+        <h2>High Salary Brings High Inflation Rate?</h2>
+
+        <div class="pure-g">
+            <div class="pure-u-2-3">
+                <div id="salary_scatter" class="vis-container"></div>
             </div>
-        </footer>
+            <div class="pure-u-1-3">
+                <div class="text_left">
+                    <p>
+                        <span class="bold_z">Zimbabwe's</span> 2024 inflation rate of 561% may be ascribed to both <span class="bold">a weak exchange rate that has caused price increases everywhere and harsh economic sanctions imposed by the</span> <span class="bold_eu">European Union</span> and the <span class="bold_us">United States of America</span>. 
+                        On the other hand, <span class="bold_s">Switzerland's</span> strong currency and sound economic policies protect it from unwarranted price increases, helping it to maintain a low inflation rate of 1.5%. 
+                        Even though <span class="bold_ar">Argentina</span> and <span class="bold_sd">Sudan</span> earn less than <span class="bold_v">Venezuela</span>, their economies are more unstable due to persistent problems like <span class="bold">excessive money printing and food shortages</span>, which result in greater inflation rates. 
+                        In general, stable nations like <span class="bold_s">Switzerland</span> show that <span class="bold">high incomes do not always translate into high rates of inflation</span>, in contrast to those experiencing economic instability.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    </footer>
+        <hr>
 
-
+        <div class="bottom_text">
+            <p>Author: <span>On Chian Yee. All Rights Reserved.</span></p>
+            <p>Last Updated: <span>16/10/2024</span></p>
+            <p>Data Source: </p>
+            <p><span><a href="https://www.imf.org/external/datamapper/PCPIPCH@WEO/WEOWORLD/VEN/COD" target="_blank">IMF</a></span></p>
+            <p><span><a href="https://github.com/Byte-Weaver/Salary_Data_Scrapper/blob/master/salary_data.csv" target="_blank">GitHub</a></span></p>
+        </div>
+    </div>
 </body>
 
 </html>

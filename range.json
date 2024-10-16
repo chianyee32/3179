@@ -1,0 +1,90 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Range area chart showing salary distributions with differentiated median and average salary lines.",
+    "data": { 
+        "url": "https://raw.githubusercontent.com/chianyee32/3179/refs/heads/main/salary_data.csv" 
+    },
+    "title":"The Overview of Highest, Lowest, Average and Median Salary",
+    "params": [
+        {
+            "name": "Continent_selection",
+            "value": "Asia",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "Asia", 
+                    "North America", 
+                    "South America", 
+                    "Europe", 
+                    "Africa", 
+                    "Oceania", 
+                    "Caribbean", 
+                    "Central America", 
+                    "Northern America"
+                ],
+                "labels": [
+                    "Asia", 
+                    "North America", 
+                    "South America", 
+                    "Europe", 
+                    "Africa", 
+                    "Oceania", 
+                    "Caribbean", 
+                    "Central America", 
+                    "Northern America"
+                ],
+                "name": "Continent Selection: "
+            }
+        }
+    ],
+    "transform": [
+        {
+            "fold": ["Median", "Average"],
+            "as": ["Salary_Type", "Salary"]
+        },
+        {
+            "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+        }
+    ],
+    "width": 900,
+    "height": 350,
+    "layer": [
+        {
+            "mark": "area",
+            "encoding": {
+                "x": { "field": "Country", "type": "nominal", "axis": { "labelAngle": -45 }},
+                "y": { "field": "Lowest", "type": "quantitative", "title": "Salary (USD)" },
+                "y2": { "field": "Highest", "type": "quantitative" },
+                "opacity": { "value": 0.3 },
+                "tooltip": [
+                    { "field": "Country", "type": "nominal", "title": "Country" },
+                    { "field": "Highest", "type": "quantitative", "title": "Highest Salary (USD)" },
+                    { "field": "Lowest", "type": "quantitative", "title": "Lowest Salary (USD)" }
+                ]
+            }
+        },
+        {
+            "mark": "line",
+            "encoding": {
+                "x": { "field": "Country", "type": "nominal" },
+                "y": { "field": "Salary", "type": "quantitative" },
+                "color": {
+                    "field": "Salary_Type",
+                    "type": "nominal",
+                    "legend": {
+                        "title": "Salary Type",
+                        "orient": "top"
+                    },
+                    "scale": {
+                        "domain": ["Median", "Average"],
+                        "range": ["red", "blue"]
+                    }
+                },
+                "tooltip": [
+                    {"field": "Country", "type": "nominal", "title": "Country"},
+                    {"field": "Salary", "type": "quantitative", "title": "Salary (USD)"}
+                ]
+            }
+        }
+    ]
+}

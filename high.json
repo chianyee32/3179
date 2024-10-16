@@ -7,7 +7,7 @@
     },
     "transform": [
         {
-            "calculate": "isValid(datum.average_salary) ? +datum.average_salary : null",
+            "calculate": "isValid(datum.Average) ? +datum.Average : null",
             "as": "average_salary"
         },
         {
@@ -25,7 +25,7 @@
     "mark": "bar",
     "encoding": {
         "x": {
-            "field": "country_name",
+            "field": "Country",
             "type": "nominal",
             "title": "Country",
             "sort": "y",
@@ -42,11 +42,11 @@
             }
         },
         "tooltip": [
-            {"field": "country_name", "type": "nominal", "title": "Country"},
+            {"field": "Country", "type": "nominal", "title": "Country"},
             {"field": "average_salary", "type": "quantitative", "title": "Average Salary (USD)"}
         ]
     },
     "config": {
-        "bar": {"color": "#67df94"}
+        "bar": {"color": "#f9ad5c "}
     }
 }

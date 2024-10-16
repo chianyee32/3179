@@ -1,1 +1,93 @@
-
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Scatter plot showing the relationship between average salary and inflation rate, sized by highest salary.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/chianyee32/3179/refs/heads/main/salary_data.csv"
+    },
+    "title": "Correlation Between Salary and Inflation Rate in 2024",
+    "width": 550,
+    "height": 300,
+    "transform": [
+        {
+            "lookup": "Country",
+            "from": {
+            "data": {
+                "url": "https://raw.githubusercontent.com/chianyee32/3179/refs/heads/main/inflation_data.csv"
+            },
+            "key": "Country",
+            "fields": ["2024"]
+            }
+        },
+        {
+            "calculate": "isValid(datum.Average) ? +datum.Average : null",
+            "as": "Average Salary"
+        },
+        {
+            "calculate": "isValid(datum.Highest) ? +datum.Highest : null",
+            "as": "Highest Salary"
+        },
+        {
+            "calculate": "isValid(datum.Lowest) ? +datum.Lowest : null",
+            "as": "Lowest Salary"
+        },
+        {
+            "calculate": "isValid(datum.Median) ? +datum.Median : null",
+            "as": "Median Salary"
+        }
+    ],
+    "params": [
+        {
+        "name": "Continent",
+        "select": {"type": "point", "fields": ["Continent"]},
+        "bind": "legend"
+        }
+    ],
+    "mark": "circle",
+    "encoding": {
+      "x": {
+        "field": "Highest Salary",
+        "type": "quantitative",
+        "title": "Highest Salary (USD)"
+      },
+      "y": {
+        "field": "2024",
+        "type": "quantitative",
+        "title": "Inflation Rate (%)"
+      },
+      "size": {
+        "value": 200
+      },
+      
+      "color":{
+        "field": "Continent",
+        "type": "nominal",
+        "scale": {
+            "domain": [
+                "Asia",
+                "North America",
+                "South America",
+                "Europe",
+                "Africa",
+                "Oceania",
+                "Caribbean",
+                "Central America",
+                "Northern America"
+            ]
+        }
+      },
+      "opacity":{
+        "condition": {"param": "Continent", "value": 1},
+        "value": 0.2
+      },
+      "tooltip": [
+        {"field": "Country", "type": "nominal"},
+        {"field": "Continent", "type": "nominal"},
+        {"field": "Highest Salary", "type": "quantitative", "title": "Highest Salary (USD)"},
+        {"field": "Lowest Salary", "type": "quantitative", "title": "Lowest Salary (USD)"},
+        {"field": "Average Salary", "type": "quantitative", "title": "Average Salary (USD)"},
+        {"field": "Median Salary", "type": "quantitative", "title": "Median Salary (USD)"},
+        {"field": "2024", "type": "quantitative", "title": "Inflation Rate (%)"}
+      ]
+    }
+  }
+  

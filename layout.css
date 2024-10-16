@@ -1,39 +1,102 @@
 html,
-body {
-    background-color: #ebf7ff;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
 
-.text_div {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Styles for the charts' containers if needed */
 #high, #low {
-    flex: 1; /* Allow charts to fill the space evenly */
-}
-
-/* Text alignment */
-.text_right {
-    text-align: right; /* Correct property for aligning text to the right */
-    padding: 10px; /* Add padding for spacing */
-    flex: 1; /* Optional: Adjusts the space the text can occupy */
+    flex: 1; 
 }
 
 .text_left {
-    text-align: left; /* Correct property for aligning text to the left */
-    padding: 10px; /* Add padding for spacing */
-    flex: 1; /* Optional: Adjusts the space the text can occupy */
+    text-align: left; 
+    padding: 10px; 
+    flex: 1; 
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bold_s {
+    font-weight: bold;
+    color: rgb(44, 95, 95);
+}
+
+.bold_m {
+    font-weight: bold;
+    color: rgb(68, 176, 176);
+}
+
+.bold_e {
+    font-weight: bold;
+    color: rgb(78, 78, 230);
+}
+
+.bold_gu {
+    font-weight: bold;
+    color: rgb(244, 192, 34);
+}
+
+.bold_sg {
+    font-weight: bold;
+    color: rgb(206, 219, 21);
+}
+
+.bold_as {
+    font-weight: bold;
+    color: rgb(243, 128, 46);
+}
+
+.bold_us {
+    font-weight: bold;
+    color: rgb(96, 143, 204);
+}
+
+.bold_n {
+    font-weight: bold;
+    color: rgb(99, 150, 61);
+}
+
+.bold_d {
+    font-weight: bold;
+    color: rgb(227, 125, 10);
+}
+
+.bold_z {
+    font-weight: bold;
+    color: rgb(11, 99, 200);
+}
+
+.bold_eu {
+    font-weight: bold;
+    color: rgb(178, 27, 102);
+}
+
+.bold_ar {
+    font-weight: bold;
+    color: rgb(213, 68, 221);
+}
+
+.bold_sd {
+    font-weight: bold;
+    color: rgb(41, 196, 21);
+}
+
+.bold_v {
+    font-weight: bold;
+    color: rgb(8, 4, 233);
 }
 
 h1 {
     text-align: center;
     color: #000000;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+h2 {
+    text-align: center;
+    color: #0a0c0a;
     font-size: 40px;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 p {
@@ -41,30 +104,56 @@ p {
     font-size: 16px;
 }
 
+.bottom_text {
+    text-align: center;
+}
+
+.bottom_text p {
+    color: #000000;
+    font-size: 12px;
+    margin: 0;  
+    padding: 2px 0;  
+}
+
+
 header {
     text-align: center;
+    font-family: 'Open Sans', sans-serif
 }
 
 .container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;    /* Center vertically */
-    height: 90vh;          /* Set to the height of the viewport or adjust as necessary */
+    justify-content: center; 
+    align-items: center;  
+
 }
 
-.container_left {
-    display: flex;
-    justify-content: left; /* Center horizontally */
-    align-items: left;    /* Center vertically */
-    height: 60vh;        /* Set to the height of the viewport or adjust as necessary */
+hr {
+    border: none;
+    height: 10px;
+    background: linear-gradient(rgb(248, 232, 193), white);
+    margin: 30px 0; 
 }
 
-.container_right {
-    display: flex;
-    justify-content: right; /* Center horizontally */
-    align-items: right;    /* Center vertically */
-    height: 60vh;        /* Set to the height of the viewport or adjust as necessary */
+body {
+    background-color: rgb(248, 243, 229);
 }
 
+.page {
+    width: 1200px;
+    background-color: white;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+}
 
+.vis-container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.pure-g {
+    margin-bottom: 40px;
+}
 
